@@ -2,9 +2,11 @@ import { FormText } from './FormText'
 
 export const Form = () => {
   return (
-    <form className="w-fit rounded-lg bg-white shadow-lg">
-      <h1>Personal info</h1>
-      <p>Please provide your name, email adress, and phone number.</p>
+    <form className="flex w-fit flex-col gap-4 rounded-lg bg-white px-6 py-8 text-blue-marine shadow-lg">
+      <h1 className="text-2xl font-bold">Personal info</h1>
+      <p className="text-gray-cool">
+        Please provide your name, email adress, and phone number.
+      </p>
       <FormText
         iType="text"
         iLabel="Name"

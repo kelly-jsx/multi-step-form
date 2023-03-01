@@ -11,7 +11,7 @@ import { Step } from './Header/Step'
 
 const steps = ['Your Info', 'Select plan', 'ADD-ONS', 'Summary']
 
-const curr = 1
+const curr = 2
 
 function App() {
   return (

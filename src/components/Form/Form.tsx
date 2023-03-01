@@ -1,5 +1,4 @@
 import React from 'react'
-import { FormText } from './FormText'
 
 type Props = {
   title: string

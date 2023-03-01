@@ -4,6 +4,7 @@ import { BottomNav } from './BottomNav'
 
 import { Step1 } from 'pages/Step1'
 import { Step2 } from 'pages/Step2'
+import { Step3 } from 'pages/Step3'
 
 import { Form } from './Form/Form'
 import { Header } from './Header/Header'
@@ -11,7 +12,7 @@ import { Step } from './Header/Step'
 
 const steps = ['Your Info', 'Select plan', 'ADD-ONS', 'Summary']
 
-const curr = 2
+const curr = 3
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
           ))}
         </Header>
         <div>
-          <Step2 />
+          <Step3 />
           <Outlet />
         </div>
         <BottomNav />

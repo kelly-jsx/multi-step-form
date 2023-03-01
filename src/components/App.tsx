@@ -1,8 +1,11 @@
+import { Outlet } from 'react-router-dom'
 import sidebarMobile from './../public/bg-sidebar-mobile.svg'
 import { BottomNav } from './BottomNav'
 
 import { Form } from './Form/Form'
 import { Header } from './Header/Header'
+
+// TO DO - Router React Dom
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
         <Header />
         <Form />
         <BottomNav />
+        <div>
+          <Outlet />
+        </div>
       </div>
     </div>
   )

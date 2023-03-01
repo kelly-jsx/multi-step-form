@@ -11,3 +11,7 @@
 p {
   font-size: 16px;
 }
+
+.plan-radio:checked + .plan-card {
+  border: 1px solid hsl(243, 100%, 62%);
+}

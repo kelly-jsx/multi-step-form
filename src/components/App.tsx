@@ -2,6 +2,9 @@ import { Outlet } from 'react-router-dom'
 import sidebarMobile from './../public/bg-sidebar-mobile.svg'
 import { BottomNav } from './BottomNav'
 
+import { Step1 } from 'pages/Step1'
+import { Step2 } from 'pages/Step2'
+
 import { Form } from './Form/Form'
 import { Header } from './Header/Header'
 import { Step } from './Header/Step'
@@ -30,8 +33,8 @@ function App() {
             />
           ))}
         </Header>
-        <Form />
         <div>
+          <Step2 />
           <Outlet />
         </div>
         <BottomNav />

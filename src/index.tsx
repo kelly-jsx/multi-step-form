@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '1',
+        path: '2',
         element: <BottomNav />
       }
     ]

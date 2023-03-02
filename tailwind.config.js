@@ -21,6 +21,9 @@ module.exports = {
         mangolia: 'hsl(217, 100%, 97%)',
         alabaster: 'hsl(231, 100%, 99%)',
         white: 'hsl(0, 0%, 100%)'
+      },
+      backgroundImage: {
+        'sidebar-mobile': "url('/src/public/bg-sidebar-mobile.svg')"
       }
     }
   },

@@ -25,29 +25,36 @@ const plans = {
   }
 }
 
-export const Step2 = () => {
+type Props = {
+  steps: string[]
+}
+
+export const Step2 = ({ steps }) => {
   const [showYearly, setShowYearly] = useState(false)
   return (
     <Form
       title="Select your plan"
       description="You have the option of monthly or yearly billing."
+      steps={steps}
+      curr={2}
     >
-      {Object.keys(plans).map((planKey) => {
-        const plan = plans[planKey]
-        return (
-          <PlanSelect
-            key={planKey}
-            imgUrl={plan.icon}
-            title={plan.title}
-            price={`$${
-              showYearly ? plan.price * 10 + '/yr' : plan.price + '/mo'
-            }`}
-            yearly={showYearly}
-          />
-        )
-      })}
-      {/* <p>{showYearly.toString()}</p> */}
-      <div className="flex justify-center gap-4">
+      <div className="flex flex-col gap-4 lg:flex-row lg:justify-center">
+        {Object.keys(plans).map((planKey) => {
+          const plan = plans[planKey]
+          return (
+            <PlanSelect
+              key={planKey}
+              imgUrl={plan.icon}
+              title={plan.title}
+              price={`$${
+                showYearly ? plan.price * 10 + '/yr' : plan.price + '/mo'
+              }`}
+              yearly={showYearly}
+            />
+          )
+        })}
+      </div>
+      <div className="mt-6 flex justify-center gap-4 lg:gap-6">
         <p
           className={`font-bold ${
             showYearly ? 'text-gray-cool' : 'text-blue-marine'

@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom'
-import sidebarMobile from './../public/bg-sidebar-mobile.svg'
 import { BottomNav } from './BottomNav'
 
 import { Step1 } from 'pages/Step1'
@@ -20,10 +19,8 @@ function App() {
   return (
     <div className="h-screen w-screen bg-mangolia">
       <div
-        className="flex h-screen w-screen flex-col items-center gap-8 px-4 pt-8"
+        className="flex h-screen w-screen flex-col items-center gap-8 bg-sidebar-mobile bg-no-repeat px-4 pt-8 lg:bg-none"
         style={{
-          backgroundImage: `url(${sidebarMobile})`,
-          backgroundRepeat: 'no-repeat',
           backgroundSize: '100% auto'
         }}
       >
@@ -38,8 +35,8 @@ function App() {
             ))}
           </Header>
         </div>
-        <div className="self-center">
-          <Step1 steps={steps} curr={curr} />
+        <div className="lg:fixed lg:top-1/2 lg:-translate-y-1/2">
+          <Step2 steps={steps} />
           <Outlet />
         </div>
         <BottomNav />

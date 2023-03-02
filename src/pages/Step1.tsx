@@ -2,7 +2,7 @@ import { Form } from 'components/Form/Form'
 import { FormText } from 'components/Form/FormText'
 
 type Props = {
-  steps: []
+  steps: string[]
 }
 
 export const Step1 = ({ steps }: Props) => {

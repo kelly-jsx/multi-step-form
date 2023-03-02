@@ -14,30 +14,32 @@ import { Step } from './Header/Step'
 
 const steps = ['Your Info', 'Select plan', 'ADD-ONS', 'Summary']
 
-const curr = 3
+const curr = 1
 
 function App() {
   return (
     <div className="h-screen w-screen bg-mangolia">
       <div
-        className="flex h-max w-screen flex-col items-center gap-8 px-4 pt-8"
+        className="flex h-screen w-screen flex-col items-center gap-8 px-4 pt-8"
         style={{
           backgroundImage: `url(${sidebarMobile})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: '100% auto'
         }}
       >
-        <Header>
-          {steps.map((description: string, index: number) => (
-            <Step
-              step={index + 1}
-              key={index}
-              currentStep={index == curr - 1}
-            />
-          ))}
-        </Header>
-        <div>
-          <Step5 />
+        <div className="flex lg:hidden">
+          <Header>
+            {steps.map((description: string, index: number) => (
+              <Step
+                step={index + 1}
+                key={index}
+                currentStep={index == curr - 1}
+              />
+            ))}
+          </Header>
+        </div>
+        <div className="self-center">
+          <Step1 steps={steps} curr={curr} />
           <Outlet />
         </div>
         <BottomNav />

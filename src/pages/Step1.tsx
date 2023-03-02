@@ -1,11 +1,17 @@
 import { Form } from 'components/Form/Form'
 import { FormText } from 'components/Form/FormText'
 
-export const Step1 = () => {
+type Props = {
+  steps: []
+}
+
+export const Step1 = ({ steps }: Props) => {
   return (
     <Form
       title="Personal info"
       description="Please provide your name, email adress, and phone number."
+      steps={steps}
+      curr={1}
     >
       <FormText
         iType="text"

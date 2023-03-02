@@ -1,6 +1,4 @@
 import React from 'react'
-import sidebarMobile from './../../public/bg-sidebar-mobile.svg'
-import { Step } from './Step'
 
 export const Header = ({ children }: { children: React.ReactNode }) => {
   return (

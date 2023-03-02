@@ -21,7 +21,11 @@ const addons = {
   }
 }
 
-export const Step4 = () => {
+type Props = {
+  steps: string[]
+}
+
+export const Step4 = ({ steps }: Props) => {
   const [showYearly, setShowYearly] = useState(false)
 
   const userOptions = {
@@ -58,6 +62,8 @@ export const Step4 = () => {
     <Form
       title="Finishing up"
       description="Double-check everything looks OK before confirming."
+      steps={steps}
+      curr={4}
     >
       <div className="flex w-full flex-col gap-2">
         <div className="flex flex-col  gap-2 rounded-lg bg-mangolia p-4">

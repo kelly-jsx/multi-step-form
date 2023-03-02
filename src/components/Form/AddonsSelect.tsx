@@ -20,7 +20,7 @@ export const AddonsSelect = ({ title, description, price, yearly }: Props) => {
   return (
     <>
       <label
-        className="addon-card w-full rounded-lg border px-4 py-2"
+        className="addon-card w-full cursor-pointer rounded-lg border px-4 py-2 lg:px-6 lg:py-4"
         htmlFor={title}
       >
         <div className="flex items-center justify-between">

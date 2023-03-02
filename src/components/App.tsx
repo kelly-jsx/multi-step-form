@@ -36,7 +36,7 @@ function App() {
           </Header>
         </div>
         <div className="lg:fixed lg:top-1/2 lg:-translate-y-1/2">
-          <Step2 steps={steps} />
+          <Step3 steps={steps} />
           <Outlet />
         </div>
         <BottomNav />

@@ -29,7 +29,7 @@ type Props = {
   steps: string[]
 }
 
-export const Step2 = ({ steps }) => {
+export const Step2 = ({ steps }: Props) => {
   const [showYearly, setShowYearly] = useState(false)
   return (
     <Form

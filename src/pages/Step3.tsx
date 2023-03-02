@@ -20,13 +20,19 @@ const addons = {
   }
 }
 
-export const Step3 = () => {
+type Props = {
+  steps: string[]
+}
+
+export const Step3 = ({ steps }: Props) => {
   const [showYearly, setShowYearly] = useState(false)
 
   return (
     <Form
       title="Pick add-ons"
       description="Add-ons help enhance your gaming experience."
+      steps={steps}
+      curr={3}
     >
       {Object.keys(addons).map((addonKey) => {
         const addon = addons[addonKey]

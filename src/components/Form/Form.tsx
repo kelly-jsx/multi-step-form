@@ -4,14 +4,22 @@ import React from 'react'
 import sidebarDesktop from './../../public/bg-sidebar-desktop.svg'
 
 type Props = {
-  title: string
-  description: string
+  title?: string
+  description?: string
   children: React.ReactNode
   steps: []
   curr: number
+  isFinish?: boolean
 }
 
-export const Form = ({ title, description, children, steps, curr }: Props) => {
+export const Form = ({
+  title,
+  description,
+  children,
+  steps,
+  curr,
+  isFinish
+}: Props) => {
   return (
     <form className="flex w-full rounded-lg bg-white px-6 py-8 text-blue-marine shadow-lg lg:gap-6">
       <div className="hidden h-full w-max rounded-md lg:flex">
@@ -34,12 +42,14 @@ export const Form = ({ title, description, children, steps, curr }: Props) => {
           {children}
         </div>
         <div className="hidden h-full items-end px-12 lg:flex">
-          <div className="flex w-full items-center justify-between">
-            <p>Go Back</p>
-            <button className="rounded-md bg-blue-marine p-3 text-white transition duration-300 ease-in-out hover:bg-blue-purplish">
-              Next Step
-            </button>
-          </div>
+          {!isFinish && (
+            <div className="flex w-full items-center justify-between">
+              <p>Go Back</p>
+              <button className="rounded-md bg-blue-marine p-3 text-white transition duration-300 ease-in-out hover:bg-blue-purplish">
+                Next Step
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </form>

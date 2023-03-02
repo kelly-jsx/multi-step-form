@@ -5,6 +5,8 @@ import { BottomNav } from './BottomNav'
 import { Step1 } from 'pages/Step1'
 import { Step2 } from 'pages/Step2'
 import { Step3 } from 'pages/Step3'
+import { Step4 } from 'pages/Step4'
+import { Step5 } from 'pages/Step5'
 
 import { Form } from './Form/Form'
 import { Header } from './Header/Header'
@@ -35,7 +37,7 @@ function App() {
           ))}
         </Header>
         <div>
-          <Step3 />
+          <Step5 />
           <Outlet />
         </div>
         <BottomNav />

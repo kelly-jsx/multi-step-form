@@ -2,6 +2,7 @@ import { AddonsSelect } from 'components/Form/AddonsSelect'
 import { Form } from 'components/Form/Form'
 import { SummaryAddon } from 'components/Form/SummaryAddon'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const addons = {
   online: {
@@ -67,12 +68,17 @@ export const Step4 = ({ steps }: Props) => {
     >
       <div className="flex w-full flex-col gap-2">
         <div className="flex flex-col  gap-2 rounded-lg bg-mangolia p-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between border-b-2 pb-4">
             <div className="flex flex-col">
               <p className="font-bold">
                 {userOptions.plan.name} ({showYearly ? 'Yearly' : 'Monthly'})
               </p>
-              <p className="underline">Change</p>
+              <Link
+                to={'/'}
+                className="underline transition duration-200 ease-in-out hover:text-blue-purplish"
+              >
+                Change
+              </Link>
             </div>
             <p className="font-bold">
               $
@@ -98,8 +104,12 @@ export const Step4 = ({ steps }: Props) => {
           ))}
         </div>
         <div className="flex items-center justify-between p-4">
-          <p>Total (per {showYearly ? 'year' : 'month'})</p>
-          <p>{showYearly ? `+$${totalPrice * 10}/yr` : `+${totalPrice}/mo`}</p>
+          <p className="text-gray-cool">
+            Total (per {showYearly ? 'year' : 'month'})
+          </p>
+          <p className="text-lg font-bold text-blue-purplish">
+            {showYearly ? `+$${totalPrice * 10}/yr` : `+${totalPrice}/mo`}
+          </p>
         </div>
       </div>
     </Form>

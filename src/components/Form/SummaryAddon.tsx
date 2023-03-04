@@ -5,7 +5,7 @@ type Props = {
 
 export const SummaryAddon = ({ name, price }: Props) => (
   <div className="flex items-center justify-between">
-    <p>{name}</p>
+    <p className="text-gray-cool">{name}</p>
     <p>{price}</p>
   </div>
 )
